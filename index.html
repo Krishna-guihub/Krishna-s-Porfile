@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishna Patil - Portfolio</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</head>
+<body>
+
+    <div id="welcome-screen">
+        <div class="welcome-content">
+            <h1>Welcome to <span>Krishna's</span> Portfolio</h1>
+            <p>Software Developer | Python Developer</p>
+            <button class="welcome-enter-btn" onclick="enterSite()">Enter Portfolio</button>
+        </div>
+    </div>
+    <nav class="navbar">
+        <a href="#" class="logo">Portfolio.</a>
+        <ul>
+           <li><a href="javascript:void(0)" onclick="togglePopup('home-popup')">Home</a></li>
+            <li><a href="javascript:void(0)" onclick="togglePopup('about-popup')">About</a></li>
+          <li><a href="javascript:void(0)" onclick="togglePopup('projects-popup')">Projects</a></li>
+            <li><a href="javascript:void(0)" onclick="togglePopup('skills-popup')">Skills</a></li>
+            <li><a href="javascript:void(0)" onclick="togglePopup('contact-popup')">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div id="about-popup" class="overlay">
+        <div class="popup-card">
+            <h2 class="popup-title">About Me</h2>
+            <div class="about-text">
+                <p>Hi, I am <strong>Krishna Patil</strong>.</p>
+                <p>I am a Computer Science student with a deep interest in Software Development. I love creating clean, efficient, and user-friendly applications.</p>
+                <p>Currently focusing on problem-solving and full-stack web technologies.</p>
+            </div>
+            <button class="close-btn" onclick="togglePopup('about-popup')">Close</button>
+        </div>
+    </div>
+
+    <div id="skills-popup" class="overlay">
+        <div class="popup-card">
+            <h2 class="popup-title">Technical Skills</h2>
+            <div class="skills-list">
+                <div class="skill-item">
+                    <span>HTML, CSS, JS</span>
+                    <div class="bar-container"><div class="bar-progress" style="width: 90%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Web Development</span>
+                    <div class="bar-container"><div class="bar-progress" style="width: 85%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Java</span>
+                    <div class="bar-container"><div class="bar-progress" style="width: 80%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Python</span>
+                    <div class="bar-container"><div class="bar-progress" style="width: 75%;"></div></div>
+                </div>
+            </div>
+            <button class="close-btn" onclick="togglePopup('skills-popup')">Close</button>
+        </div>
+    </div>
+
+    <div id="contact-popup" class="overlay">
+        <div class="popup-card">
+            <h2 class="popup-title">Contact Info</h2>
+            <div class="contact-info">
+                <p><i class='bx bxs-envelope'></i> krishnapatil50604@gmail.com</p>
+                <p><i class='bx bxs-phone'></i> +91 9021377036</p>
+                <p><i class='bx bxs-map'></i> Pune , Maharashtra</p>
+            </div>
+            <button class="close-btn" onclick="togglePopup('contact-popup')">Close</button>
+        </div>
+    </div>
+
+     <div id="projects-popup" class="overlay">
+        <div class="popup-card">
+            <h2 class="popup-title">My Projects</h2>
+            <div class="projects-info">
+                <p><i class='bx bxs-microphone'></i> <strong>Voice Assistant</strong> (Python)</p>
+                <p><i class='bx bxs-calculator'></i> <strong>Scientific Calculator</strong></p>
+                <p><i class='bx bxs-bolt'></i> <strong>BMI Calculator</strong></p>
+            </div>
+            <button class="close-btn" onclick="togglePopup('projects-popup')">Close</button>
+        </div>
+    </div>
+
+    <div class="bars-animation"></div>
+    <div class="bar" style="--i:6;"></div>
+    <div class="bar" style="--i:5;"></div>
+    <div class="bar" style="--i:4;"></div>
+    <div class="bar" style="--i:3;"></div>
+    <div class="bar" style="--i:2;"></div>
+    <div class="bar" style="--i:1;"></div>
+
+    <section id="home" class="home">
+        <div class="home-info">
+            <h1>Krishna Patil</h1>
+            <h2>I am a <span class="typing" style="color: #7cf03d;"></span></h2>
+            <p>
+                Computer Science student with a passion for <b>Software Development</b>. 
+                I specialize in building efficient applications and solving complex 
+                real-world problems using <b>Java</b> and modern web technologies.
+            </p>
+            <div class="btn-sci">
+                <a href="Krishna_Patil_CV.pdf" class="btn">Download CV</a>
+
+                <div class="sci">
+                    <a href="https://github.com/Krishna-guihub" target="_blank"><i class="bx bxl-github" ></i></a>
+                    <a href="https://www.linkedin.com/in/krishna-patil-27-cse/" target="_blank"><i class="bx bxl-linkedin"></i></a>
+                    <a href="https://twitter.com/@patilkrishna01" target="_blank"><i class="bx bxl-twitter"></i></a>
+                    <a href="https://instagram.com/krishna.patil_22" target="_blank"><i class="bx bxl-instagram"></i></a>
+                    <a href="https://wa.me/919021377036?text=Hello%20Krishna" target="_blank"><i class="bx bxl-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="home-img">
+            <div class="img-box">
+                <div class="img-item">
+                    <img src="Me.jpg" alt="Krishna Patil">
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- 
+    WELCOME SCREEN HERE -->
+    <script>
+        // Welcome Screen Function
+        function enterSite() {
+            const welcome = document.getElementById('welcome-screen');
+            welcome.classList.add('welcome-hidden');
+            setTimeout(() => {
+                welcome.style.display = 'none';
+            }, 800);
+        }
+
+        // Popup toggle logic
+        function togglePopup(id) {
+            document.getElementById(id).classList.toggle('active');
+        }
+
+        // Typing Effect logic
+        var typed = new Typed(".typing", {
+            strings: ["Software Developer", "Python Developer", "Problem Solver",],
+            typeSpeed: 100,
+            backSpeed: 60,
+            loop: true
+        });
+    </script>
+
+</body>
+</html>
+
